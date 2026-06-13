@@ -1,0 +1,52 @@
+{
+  "name": "ctxshot-mcp",
+  "version": "0.1.0",
+  "description": "MCP server — lightweight daily project brief for Claude Code & Cursor (pack_context, session_brief, context_stats).",
+  "type": "module",
+  "bin": {
+    "ctxshot-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.js",
+    "inspect": "npx @modelcontextprotocol/inspector tsx src/index.ts",
+    "prepublishOnly": "npm run build && npm run test:smoke",
+    "test:smoke": "node scripts/ci-smoke.mjs",
+    "test:mcp": "node scripts/test-mcp-client.mjs"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "ctxshot",
+    "cursor",
+    "claude-code",
+    "context"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/G12789/ctxshot-mcp.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "ctxshot": "^0.2.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}
