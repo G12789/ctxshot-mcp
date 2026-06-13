@@ -5,7 +5,6 @@ import { join } from "node:path";
 import { pathToFileURL } from "node:url";
 
 const root = join(import.meta.dirname, "..");
-const ctxshotRoot = join(root, "..", "ctxshot");
 
 function run(cmd, args, cwd) {
   const r = spawnSync(cmd, args, {
@@ -19,8 +18,6 @@ function run(cmd, args, cwd) {
   }
 }
 
-run("npm", ["run", "build"], ctxshotRoot);
-run("npm", ["install"], root);
 run("npm", ["run", "build"], root);
 
 const { createCtxshotMcpServer } = await import(
