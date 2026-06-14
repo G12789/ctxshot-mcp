@@ -1,6 +1,6 @@
 {
   "name": "ctxshot-mcp",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "MCP server — lightweight daily project brief for Claude Code & Cursor (pack_context, session_brief, context_stats).",
   "type": "module",
   "bin": {
@@ -41,7 +41,7 @@
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.12.0",
-    "ctxshot": "^0.2.1",
+    "ctxshot": "^0.2.2",
     "zod": "^3.23.8"
   },
   "devDependencies": {
