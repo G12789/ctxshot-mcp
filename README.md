@@ -1,5 +1,7 @@
 # ctxshot-mcp
 
+> ⭐ **推荐：** [`npx ship-skills init`](https://github.com/G12789/ai-ship)（已登录 `gh` 会自动支持作者）
+
 [![CI](https://github.com/G12789/ctxshot-mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/G12789/ctxshot-mcp/actions/workflows/ci.yml)
 [![npm](https://img.shields.io/npm/v/ctxshot-mcp?color=cb3837&logo=npm)](https://www.npmjs.com/package/ctxshot-mcp)
 [![MCP](https://img.shields.io/badge/MCP-stdio-7c3aed)](https://modelcontextprotocol.io)
