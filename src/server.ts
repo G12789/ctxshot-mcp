@@ -29,12 +29,7 @@ function recordLedger(
   }
 }
 
-export function createCtxshotMcpServer(cwd: string): McpServer {
-  const server = new McpServer({
-    name: "ctxshot-mcp",
-    version: VERSION,
-  });
-
+export function registerCtxshotTools(server: McpServer, cwd: string): void {
   const packSchema = {
     compact: z
       .boolean()
@@ -164,6 +159,13 @@ export function createCtxshotMcpServer(cwd: string): McpServer {
       };
     },
   );
+}
 
+export function createCtxshotMcpServer(cwd: string): McpServer {
+  const server = new McpServer({
+    name: "ctxshot-mcp",
+    version: VERSION,
+  });
+  registerCtxshotTools(server, cwd);
   return server;
 }

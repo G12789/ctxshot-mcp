@@ -1,10 +1,14 @@
 {
   "name": "ctxshot-mcp",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "MCP server — lightweight daily project brief for Claude Code & Cursor (pack_context, session_brief, context_stats).",
   "type": "module",
   "bin": {
     "ctxshot-mcp": "dist/index.js"
+  },
+  "exports": {
+    ".": "./dist/index.js",
+    "./register": "./dist/server.js"
   },
   "files": [
     "dist",
